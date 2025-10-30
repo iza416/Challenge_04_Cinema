@@ -84,5 +84,5 @@ O teste de reserva valida a jornada mais longa do usuário:
 
     Aplicação Testada:
 
-    back-end: Clique aqui
-    front-end: Clique aqui
+    back-end: https://github.com/juniorschmitz/cinema-challenge-back
+    front-end: https://github.com/juniorschmitz/cinema-challenge-front
