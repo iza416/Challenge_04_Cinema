@@ -81,3 +81,8 @@ O teste de reserva valida a jornada mais longa do usuário:
 [cite\_start]O teste **`C4.4 - Acesso Não Autorizado ao Histórico de Reservas`** [cite: 39] confirma que o endpoint `/reservations/me` está protegido.
 
   * [cite\_start]**Validação:** A requisição sem um token de autorização retorna o *status* **`401 Unauthorized`**[cite: 40].
+
+    Aplicação Testada:
+
+    back-end: Clique aqui
+    front-end: Clique aqui
