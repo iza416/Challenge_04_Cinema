@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-10-30T15:05:20.273792" rpa="false" schemaversion="5">
+<suite id="s1" name="Front End Testes" source="C:\Users\User\Desktop\Compass\chalenge 04\testes\front_end_testes">
+<suite id="s1-s1" name="Auth Test" source="C:\Users\User\Desktop\Compass\chalenge 04\testes\front_end_testes\auth_test.robot">
+<test id="s1-s1-t1" name="US-AUTH-002 - Login de Usuário Válido" line="9">
+<kw name="Start Browser Session" owner="web_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:21.261716" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3002'.</msg>
+<arg>${FRONTEND_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:05:21.261222" elapsed="18.043444"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-30T15:05:39.307248" elapsed="0.742346"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${WAIT_TIME}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-30T15:05:40.050038" elapsed="0.006654"/>
+</kw>
+<kw name="Go To Homepage" owner="web_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:40.059249" level="INFO">Opening url 'http://localhost:3002'</msg>
+<arg>${FRONTEND_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:05:40.058678" elapsed="1.489887"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//header</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:05:41.549152" elapsed="0.335192"/>
+</kw>
+<doc>Navega para a página inicial e espera o carregamento do cabeçalho.</doc>
+<status status="PASS" start="2025-10-30T15:05:40.057494" elapsed="1.827334"/>
+</kw>
+<doc>Inicia o navegador e navega para a URL do Front-end.</doc>
+<status status="PASS" start="2025-10-30T15:05:21.259652" elapsed="20.625884"/>
+</kw>
+<kw name="Perform User Login" owner="web_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:41.890841" level="INFO">Clicking element 'xpath=//a[contains(@href, '/login') or contains(text(), 'Login')]'.</msg>
+<arg>xpath=//a[contains(@href, '/login') or contains(text(), 'Login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:05:41.890159" elapsed="0.349322"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:05:42.239996" elapsed="0.039807"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:42.281329" level="INFO">Typing text 'test@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:05:42.280518" elapsed="0.626704"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:42.908120" level="INFO">Typing text 'password123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:05:42.907702" elapsed="0.506412"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:43.415002" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
+<arg>xpath=//button[text()='Entrar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:05:43.414608" elapsed="0.295025"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${FRONTEND_URL}/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-10-30T15:05:43.710592" elapsed="0.525325"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Filmes em Cartaz</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:05:44.236772" elapsed="0.353269"/>
+</kw>
+<arg>test@example.com</arg>
+<arg>password123</arg>
+<doc>Realiza o login de usuário comum (test@example.com / password123).</doc>
+<status status="PASS" start="2025-10-30T15:05:41.888939" elapsed="2.702224"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:44.611344" level="INFO">Current location contains 'http://localhost:3002/'.</msg>
+<arg>${FRONTEND_URL}/</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-10-30T15:05:44.593484" elapsed="0.018258"/>
+</kw>
+<kw name="End Browser Session" owner="web_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-30T15:05:44.614921" elapsed="3.550359"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2025-10-30T15:05:44.613358" elapsed="3.552175"/>
+</kw>
+<doc>Verifica se o usuário pode fazer login com sucesso.</doc>
+<status status="PASS" start="2025-10-30T15:05:21.256391" elapsed="26.909759"/>
+</test>
+<test id="s1-s1-t2" name="US-AUTH-004 - Visualizar e Editar Nome do Perfil" line="18">
+<kw name="Start Browser Session" owner="web_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:48.171678" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3002'.</msg>
+<arg>${FRONTEND_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:05:48.171116" elapsed="7.506114"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-30T15:05:55.677691" elapsed="1.569976"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${WAIT_TIME}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-30T15:05:57.248316" elapsed="0.012954"/>
+</kw>
+<kw name="Go To Homepage" owner="web_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:57.263523" level="INFO">Opening url 'http://localhost:3002'</msg>
+<arg>${FRONTEND_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:05:57.262769" elapsed="1.429685"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//header</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:05:58.693056" elapsed="0.186839"/>
+</kw>
+<doc>Navega para a página inicial e espera o carregamento do cabeçalho.</doc>
+<status status="PASS" start="2025-10-30T15:05:57.261917" elapsed="1.618516"/>
+</kw>
+<doc>Inicia o navegador e navega para a URL do Front-end.</doc>
+<status status="PASS" start="2025-10-30T15:05:48.170480" elapsed="10.710337"/>
+</kw>
+<kw name="Perform User Login" owner="web_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:58.884524" level="INFO">Clicking element 'xpath=//a[contains(@href, '/login') or contains(text(), 'Login')]'.</msg>
+<arg>xpath=//a[contains(@href, '/login') or contains(text(), 'Login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:05:58.884004" elapsed="0.248966"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:05:59.133532" elapsed="0.037236"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:59.175703" level="INFO">Typing text 'test@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:05:59.173467" elapsed="0.618609"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:05:59.793387" level="INFO">Typing text 'password123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:05:59.792624" elapsed="0.280397"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:00.074120" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
+<arg>xpath=//button[text()='Entrar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:00.073537" elapsed="0.473995"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${FRONTEND_URL}/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-10-30T15:06:00.548044" elapsed="0.410909"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Filmes em Cartaz</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:00.959476" elapsed="0.126558"/>
+</kw>
+<arg>test@example.com</arg>
+<arg>password123</arg>
+<doc>Realiza o login de usuário comum (test@example.com / password123).</doc>
+<status status="PASS" start="2025-10-30T15:05:58.882956" elapsed="2.203367"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:01.089613" level="INFO">Clicking element 'xpath=//header//a[contains(@href, 'profile')]'.</msg>
+<arg>xpath=//header//a[contains(@href, 'profile')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:01.088908" elapsed="0.784703"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[contains(text(), 'Perfil')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:01.894919" elapsed="0.046002"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2025-10-30T15:06:01.942356" level="INFO">${new_name} = zqkqfugudv</msg>
+<var>${new_name}</var>
+<arg>10</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-10-30T15:06:01.941693" elapsed="0.000783"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:01.943434" level="INFO">Typing text 'zqkqfugudv' into text field 'id=name'.</msg>
+<arg>id=name</arg>
+<arg>${new_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:01.942985" elapsed="0.779825"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:02.724615" level="INFO">Clicking element 'xpath=//button[contains(., 'Salvar Alterações')]'.</msg>
+<arg>xpath=//button[contains(., 'Salvar Alterações')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:02.724046" elapsed="0.202788"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Perfil atualizado com sucesso</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:02.929161" elapsed="0.268981"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:03.199763" level="INFO">Clicking button 'OK'.</msg>
+<arg>OK</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:03.199104" elapsed="0.205902"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-10-30T15:06:05.409142" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-10-30T15:06:03.406507" elapsed="2.002964"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:06.180011" level="INFO">Element 'id=name' attribute 'value' contains value 'zqkqfugudv'.</msg>
+<arg>id=name</arg>
+<arg>value</arg>
+<arg>${new_name}</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2025-10-30T15:06:05.410326" elapsed="0.769843"/>
+</kw>
+<kw name="End Browser Session" owner="web_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-30T15:06:06.181673" elapsed="2.374094"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2025-10-30T15:06:06.181034" elapsed="2.374911"/>
+</kw>
+<doc>Verifica a funcionalidade de perfil (navegação, exibição de dados e edição).</doc>
+<status status="PASS" start="2025-10-30T15:05:48.168913" elapsed="20.387508"/>
+</test>
+<status status="PASS" start="2025-10-30T15:05:20.341430" elapsed="48.218158"/>
+</suite>
+<suite id="s1-s2" name="Home Test" source="C:\Users\User\Desktop\Compass\chalenge 04\testes\front_end_testes\home_test.robot">
+<test id="s1-s2-t1" name="US-HOME-001 - Carregamento e Elementos da Página Inicial" line="10">
+<kw name="Start Browser Session" owner="web_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:08.585247" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3002'.</msg>
+<arg>${FRONTEND_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:06:08.584866" elapsed="7.365484"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-30T15:06:15.950922" elapsed="0.636435"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${WAIT_TIME}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-30T15:06:16.587816" elapsed="0.018511"/>
+</kw>
+<kw name="Go To Homepage" owner="web_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:16.609211" level="INFO">Opening url 'http://localhost:3002'</msg>
+<arg>${FRONTEND_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:06:16.608157" elapsed="2.314562"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//header</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:18.923229" elapsed="0.218879"/>
+</kw>
+<doc>Navega para a página inicial e espera o carregamento do cabeçalho.</doc>
+<status status="PASS" start="2025-10-30T15:06:16.607018" elapsed="2.536703"/>
+</kw>
+<doc>Inicia o navegador e navega para a URL do Front-end.</doc>
+<status status="PASS" start="2025-10-30T15:06:08.584186" elapsed="10.560232"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Filmes em Cartaz</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:19.145432" elapsed="0.038268"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(@class, 'movie-card')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:19.184485" elapsed="0.032624"/>
+</kw>
+<kw name="End Browser Session" owner="web_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-30T15:06:19.220454" elapsed="2.504490"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2025-10-30T15:06:19.218899" elapsed="2.506380"/>
+</kw>
+<doc>Verifica se os elementos chave da Home Page estão presentes.</doc>
+<status status="PASS" start="2025-10-30T15:06:08.582114" elapsed="13.143609"/>
+</test>
+<test id="s1-s2-t2" name="US-NAV-001 - Navegação do Cabeçalho" line="19">
+<kw name="Start Browser Session" owner="web_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:21.730620" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3002'.</msg>
+<arg>${FRONTEND_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:06:21.730143" elapsed="5.657637"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-30T15:06:27.389388" elapsed="0.374690"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${WAIT_TIME}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-30T15:06:27.764522" elapsed="0.003139"/>
+</kw>
+<kw name="Go To Homepage" owner="web_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:27.769738" level="INFO">Opening url 'http://localhost:3002'</msg>
+<arg>${FRONTEND_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:06:27.769003" elapsed="2.346348"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//header</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:30.115907" elapsed="0.161396"/>
+</kw>
+<doc>Navega para a página inicial e espera o carregamento do cabeçalho.</doc>
+<status status="PASS" start="2025-10-30T15:06:27.768199" elapsed="2.509470"/>
+</kw>
+<doc>Inicia o navegador e navega para a URL do Front-end.</doc>
+<status status="PASS" start="2025-10-30T15:06:21.729462" elapsed="8.548492"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:30.280597" level="INFO">Clicking element 'xpath=//header//a[contains(text(), 'Filmes') or contains(@href, '/movies')]'.</msg>
+<arg>xpath=//header//a[contains(text(), 'Filmes') or contains(@href, '/movies')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:30.280034" elapsed="0.507323"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h1[contains(text(), 'Filmes')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:30.814363" elapsed="0.094938"/>
+</kw>
+<kw name="Location Should Contain" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:30.947793" level="INFO">Current location contains '/movies'.</msg>
+<arg>/movies</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<status status="PASS" start="2025-10-30T15:06:30.911489" elapsed="0.036592"/>
+</kw>
+<kw name="End Browser Session" owner="web_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-30T15:06:30.950874" elapsed="3.753770"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2025-10-30T15:06:30.949638" elapsed="3.755216"/>
+</kw>
+<doc>Verifica a navegação principal para a página de filmes.</doc>
+<status status="PASS" start="2025-10-30T15:06:21.728096" elapsed="12.977175"/>
+</test>
+<status status="PASS" start="2025-10-30T15:06:08.563880" elapsed="26.144249"/>
+</suite>
+<suite id="s1-s3" name="Reservations Test" source="C:\Users\User\Desktop\Compass\chalenge 04\testes\front_end_testes\reservations_test.robot">
+<test id="s1-s3-t1" name="US-RESERVE-001_002 - Reserva Completa de Ingresso" line="10">
+<kw name="Start Browser Session" owner="web_keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:34.732529" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3002'.</msg>
+<arg>${FRONTEND_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:06:34.732123" elapsed="7.979817"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-10-30T15:06:42.712581" elapsed="0.644356"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${WAIT_TIME}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2025-10-30T15:06:43.357408" elapsed="0.002912"/>
+</kw>
+<kw name="Go To Homepage" owner="web_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:43.361559" level="INFO">Opening url 'http://localhost:3002'</msg>
+<arg>${FRONTEND_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-10-30T15:06:43.361241" elapsed="2.206705"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//header</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:45.568461" elapsed="0.622466"/>
+</kw>
+<doc>Navega para a página inicial e espera o carregamento do cabeçalho.</doc>
+<status status="PASS" start="2025-10-30T15:06:43.360757" elapsed="2.831163"/>
+</kw>
+<doc>Inicia o navegador e navega para a URL do Front-end.</doc>
+<status status="PASS" start="2025-10-30T15:06:34.731477" elapsed="11.460952"/>
+</kw>
+<kw name="Perform User Login" owner="web_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:46.197612" level="INFO">Clicking element 'xpath=//a[contains(@href, '/login') or contains(text(), 'Login')]'.</msg>
+<arg>xpath=//a[contains(@href, '/login') or contains(text(), 'Login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:46.197034" elapsed="0.276735"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:46.474217" elapsed="0.037183"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:46.512973" level="INFO">Typing text 'test@example.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:46.512106" elapsed="0.845238"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:47.358254" level="INFO">Typing text 'password123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:47.357726" elapsed="0.240480"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:47.598953" level="INFO">Clicking button 'xpath=//button[text()='Entrar']'.</msg>
+<arg>xpath=//button[text()='Entrar']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:47.598626" elapsed="0.235035"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${FRONTEND_URL}/</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-10-30T15:06:47.834242" elapsed="0.462682"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Filmes em Cartaz</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-10-30T15:06:48.297349" elapsed="0.046659"/>
+</kw>
+<arg>test@example.com</arg>
+<arg>password123</arg>
+<doc>Realiza o login de usuário comum (test@example.com / password123).</doc>
+<status status="PASS" start="2025-10-30T15:06:46.196219" elapsed="2.284467"/>
+</kw>
+<kw name="Click Film Details And Session" owner="web_keywords">
+<kw name="Go To Filmes Page" owner="web_keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:06:48.482790" level="INFO">Clicking element 'xpath=//*[contains(text(), 'Ver Detalhes')][1]'.</msg>
+<arg>xpath=//*[contains(text(), 'Ver Detalhes')][1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-10-30T15:06:48.482489" elapsed="0.721320"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<msg time="2025-10-30T15:07:19.484546" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-10-30T15:07:19.485033" level="FAIL">Element 'xpath=//h1[contains(text(), 'Filme')]' did not appear in 30 seconds.</msg>
+<arg>xpath=//h1[contains(text(), 'Filme')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="FAIL" start="2025-10-30T15:06:49.204524" elapsed="31.084324">Element 'xpath=//h1[contains(text(), 'Filme')]' did not appear in 30 seconds.</status>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Selecionar Assentos')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.290146" elapsed="0.000204"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Selecionar Assentos')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.290841" elapsed="0.000142"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Seleção de Assentos</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.292024" elapsed="0.001028"/>
+</kw>
+<status status="FAIL" start="2025-10-30T15:06:48.482040" elapsed="31.812034">Element 'xpath=//h1[contains(text(), 'Filme')]' did not appear in 30 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Ver Detalhes')][1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.294597" elapsed="0.000133"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Selecionar Assentos')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.295350" elapsed="0.000169"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Selecionar Assentos')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.296075" elapsed="0.000159"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@class, 'seat')][1]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.296699" elapsed="0.000155"/>
+</kw>
+<doc>Navega para a lista de filmes, clica no card, e seleciona a sessão.</doc>
+<status status="FAIL" start="2025-10-30T15:06:48.481506" elapsed="31.815788">Element 'xpath=//h1[contains(text(), 'Filme')]' did not appear in 30 seconds.</status>
+</kw>
+<kw name="Select Available Seat" owner="web_keywords">
+<doc>Clica no primeiro assento disponível (US-RESERVE-001).</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.298326" elapsed="0.000110"/>
+</kw>
+<kw name="Proceed To Checkout And Pay" owner="web_keywords">
+<doc>Avança para o checkout, seleciona pagamento e finaliza a compra (US-RESERVE-002).</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.299321" elapsed="0.000164"/>
+</kw>
+<kw name="Verify Reservation Success" owner="web_keywords">
+<doc>Verifica se a confirmação final da reserva apareceu.</doc>
+<status status="NOT RUN" start="2025-10-30T15:07:20.300870" elapsed="0.000162"/>
+</kw>
+<kw name="End Browser Session" owner="web_keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-10-30T15:07:20.303426" elapsed="2.505750"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2025-10-30T15:07:20.302306" elapsed="2.507518"/>
+</kw>
+<doc>Testa o fluxo completo de reserva: Login, Seleção de Filme, Assento e Pagamento.</doc>
+<tag>E2E</tag>
+<tag>Reserva</tag>
+<status status="FAIL" start="2025-10-30T15:06:34.729249" elapsed="48.082062">Element 'xpath=//h1[contains(text(), 'Filme')]' did not appear in 30 seconds.</status>
+</test>
+<status status="FAIL" start="2025-10-30T15:06:34.711948" elapsed="48.110928"/>
+</suite>
+<status status="FAIL" start="2025-10-30T15:05:20.277297" elapsed="122.555692"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">E2E</stat>
+<stat pass="0" fail="1" skip="0">Reserva</stat>
+</tag>
+<suite>
+<stat name="Front End Testes" id="s1" pass="4" fail="1" skip="0">Front End Testes</stat>
+<stat name="Auth Test" id="s1-s1" pass="2" fail="0" skip="0">Front End Testes.Auth Test</stat>
+<stat name="Home Test" id="s1-s2" pass="2" fail="0" skip="0">Front End Testes.Home Test</stat>
+<stat name="Reservations Test" id="s1-s3" pass="0" fail="1" skip="0">Front End Testes.Reservations Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
